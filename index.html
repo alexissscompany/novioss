@@ -1,54 +1,157 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accesos a Meses</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #FFC0CB;
-        }
-        .container {
-            text-align: center;
-        }
-        .mes {
-            margin: 10px;
-            padding: 15px 30px;
-            font-size: 18px;
-            color: #fff;
-            background-color: #007BFF;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-        }
-        .mes:hover {
-            background-color: #0056b3;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Accesos a Meses</title>
+  <!-- Fuentes de Google: puedes cambiarlas si lo deseas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Great+Vibes&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Cuerpo con fondo en degradado pastel */
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #c8b6ff, #b8e0fe);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      color: #333;
+    }
+
+    /* Encabezado (header) */
+    header {
+      background-color: rgba(255, 255, 255, 0.3);
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(10px);
+    }
+
+    /* Logo de ejemplo en el header */
+    .logo {
+      font-family: "Great Vibes", cursive;
+      font-size: 2rem;
+      color: #4b4b4b;
+      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+    }
+
+    /* Contenedor principal */
+    .container {
+      flex: 1; /* Para que ocupe el espacio central */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    /* Tarjeta donde se encuentran los enlaces a los meses */
+    .card {
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      padding: 30px;
+      max-width: 800px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Título dentro de la tarjeta */
+    .card h1 {
+      font-family: "Great Vibes", cursive;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #5c5c5c;
+    }
+
+    /* Enlaces a meses */
+    .mes {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 30px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      border: none;
+      background: linear-gradient(135deg, #7c83fd, #96b3ff);
+      transition: all 0.3s ease;
+    }
+
+    .mes:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      background: linear-gradient(135deg, #96b3ff, #7c83fd);
+    }
+
+    /* Pie de página */
+    footer {
+      background-color: rgba(255, 255, 255, 0.3);
+      text-align: center;
+      padding: 15px;
+      backdrop-filter: blur(10px);
+    }
+
+    footer p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Responsivo para pantallas pequeñas */
+    @media (max-width: 600px) {
+      .card h1 {
+        font-size: 2.2rem;
+      }
+      .mes {
+        margin: 8px;
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <a href="mes1.html" class="mes">Mes 1</a>
-        <a href="mes2.html" class="mes">Mes 2</a>
-        <a href="mes3.html" class="mes">Mes 3</a>
-        <!-- Agrega más meses hasta el 12 -->
-        <a href="mes4.html" class="mes">Mes 4</a>
-        <a href="mes5.html" class="mes">Mes 5</a>
-        <a href="mes6.html" class="mes">Mes 6</a>
-        <a href="mes7.html" class="mes">Mes 7</a>
-        <a href="mes8.html" class="mes">Mes 8</a>
-        <a href="mes9.html" class="mes">Mes 9</a>
-        <a href="mes10.html" class="mes">Mes 10</a>
-        <a href="mes11.html" class="mes">Mes 11</a>
-        <a href="mes12.html" class="mes">Mes 12</a>
+  <!-- Encabezado -->
+  <header>
+    <div class="logo">MESES DE 
+    NOVIAZGO </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <div class="container">
+    <div class="card">
+      <h1>Accesos a Meses</h1>
+      <!-- Enlaces a los distintos meses -->
+      <a href="mes1.html" class="mes">Mes 1</a>
+      <a href="mes2.html" class="mes">Mes 2</a>
+      <a href="mes3.html" class="mes">Mes 3</a>
+      <a href="mes4.html" class="mes">Mes 4</a>
+      <a href="mes5.html" class="mes">Mes 5</a>
+      <a href="mes6.html" class="mes">Mes 6</a>
+      <a href="mes7.html" class="mes">Mes 7</a>
+      <a href="mes8.html" class="mes">Mes 8</a>
+      <a href="mes9.html" class="mes">Mes 9</a>
+      <a href="mes10.html" class="mes">Mes 10</a>
+      <a href="mes11.html" class="mes">Mes 11</a>
+      <a href="mes12.html" class="mes">Mes 12</a>
     </div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>© 2025 RUBI Y ALEXIS. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
