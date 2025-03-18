@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Accesos a Meses</title>
+  <title>Accesos a Meses + Reproductores</title>
   <!-- Fuentes de Google: puedes cambiarlas si lo deseas -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -62,7 +62,7 @@
       border-radius: 16px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
       padding: 30px;
-      max-width: 800px;
+      max-width: 900px;
       width: 100%;
       text-align: center;
     }
@@ -96,6 +96,112 @@
       background: linear-gradient(135deg, #96b3ff, #7c83fd);
     }
 
+    /* Estilo para el cronómetro */
+    .timer {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    /* Sección de reproductores */
+    .music-players {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .music-players h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #5c5c5c;
+      font-family: "Great Vibes", cursive;
+    }
+
+    .music-player {
+      border: 1px solid #000;
+      border-radius: 10px;
+      width: 300px;
+      margin: 20px auto;
+      padding: 15px;
+      background: #fff;
+      position: relative;
+    }
+
+    /* Contenedor de la portada */
+    .cover-container {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      border: 1px solid #000;
+      margin-bottom: 10px;
+      overflow: hidden; /* Oculta desbordes de la imagen */
+    }
+
+    .cover {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Icono de corazón (like) */
+    .heart {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .heart:hover {
+      color: red;
+    }
+
+    /* Información de la canción */
+    .info {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .song-title {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 2px;
+    }
+
+    .singer {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* Controles */
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: transform 0.2s;
+    }
+
+    .btn:hover {
+      transform: scale(1.2);
+    }
+
+    /* Barra de progreso (decorativa) */
+    .progress-bar-container {
+      margin-bottom: 10px;
+    }
+
+    .progress-bar {
+      width: 100%;
+    }
+
     /* Pie de página */
     footer {
       background-color: rgba(255, 255, 255, 0.3);
@@ -119,14 +225,16 @@
         padding: 10px 20px;
         font-size: 16px;
       }
+      .music-player {
+        width: 90%;
+      }
     }
   </style>
 </head>
 <body>
   <!-- Encabezado -->
   <header>
-    <div class="logo">MESES DE 
-    NOVIAZGO </div>
+    <div class="logo">Novios Y Esposos Hasta que la muerte nos separe </div>
   </header>
 
   <!-- Contenido principal -->
@@ -146,12 +254,307 @@
       <a href="mes10.html" class="mes">Mes 10</a>
       <a href="mes11.html" class="mes">Mes 11</a>
       <a href="mes12.html" class="mes">Mes 12</a>
+
+      <!-- Cronómetro -->
+      <div id="timer" class="timer"></div>
+
+      <!-- Reproductores de música -->
+      <div class="music-players">
+        <h2>Canciones que te dedico mi corazon ❤️, Por que no hay nad mas especial para mi q ue tu mi vida, que nunca se te olvide que eres el amor de mi alma y mi ser mi niña hermosa, te amo con mi vida mi amor❤️</h2>
+
+        <!-- Reproductor 1 -->
+        <div class="music-player">
+          <div class="cover-container">
+            <img src="https://i.pinimg.com/236x/40/f8/85/40f88562fd1694882ca03c0119910f5c.jpg" alt="Cover" class="cover" />
+            <span class="heart">♡</span>
+          </div>
+          <div class="info">
+            <div class="">Sabes una cosa</div>
+            <div class="singer">Luis Miguel</div>
+          </div>
+          <div class="controls">
+            <button class="btn shuffle">🔀</button>
+            <button class="btn prev">⏮️</button>
+            <button class="btn play">▶️</button>
+            <button class="btn pause">⏸️</button>
+            <button class="btn next">⏭️</button>
+            <button class="btn repeat">🔁</button>
+          </div>
+          <div class="progress-bar-container">
+            <input type="range" class="progress-bar" value="0" min="0" max="100" />
+          </div>
+          <audio src="Luis Miguel - Sabes Una Cosa (Video Con Letra).mp3"></audio>
+        </div>
+
+        <!-- Reproductor 2 -->
+        <div class="music-player">
+          <div class="cover-container">
+            <img src="https://i.pinimg.com/236x/b9/cc/41/b9cc4120a24a08875b35a4094c05ac56.jpg" alt="Cover" class="cover" />
+            <span class="heart">♡</span>
+          </div>
+          <div class="info">
+            <div class="song-title">Soñe</div>
+            <div class="singer">Zoe</div>
+          </div>
+          <div class="controls">
+            <button class="btn shuffle">🔀</button>
+            <button class="btn prev">⏮️</button>
+            <button class="btn play">▶️</button>
+            <button class="btn pause">⏸️</button>
+            <button class="btn next">⏭️</button>
+            <button class="btn repeat">🔁</button>
+          </div>
+          <div class="progress-bar-container">
+            <input type="range" class="progress-bar" value="0" min="0" max="100" />
+          </div>
+          <audio src="Zoé - Soñé (MTV Unplugged).mp3"></audio>
+        </div>
+
+        <!-- Reproductor 3 -->
+        <div class="music-player">
+          <div class="cover-container">
+            <img src="https://i.pinimg.com/236x/33/dd/23/33dd23c6f20277bc0d77bb8e56211a64.jpg" alt="Cover" class="cover" />
+            <span class="heart">♡</span>
+          </div>
+          <div class="info">
+            <div class="song-title">Eres</div>
+            <div class="singer">Cafe tacvba</div>
+          </div>
+          <div class="controls">
+            <button class="btn shuffle">🔀</button>
+            <button class="btn prev">⏮️</button>
+            <button class="btn play">▶️</button>
+            <button class="btn pause">⏸️</button>
+            <button class="btn next">⏭️</button>
+            <button class="btn repeat">🔁</button>
+          </div>
+          <div class="progress-bar-container">
+            <input type="range" class="progress-bar" value="0" min="0" max="100" />
+          </div>
+          <audio src="Café Tacvba - Eres (Video Oficial).mp3"></audio>
+        </div>
+
+        <!-- Reproductor 4 -->
+        <div class="music-player">
+          <div class="cover-container">
+            <img src="https://i.pinimg.com/236x/db/04/a0/db04a00011b61f01de60bef8dcd797af.jpg" alt="Cover" class="cover" />
+            <span class="heart">♡</span>
+          </div>
+          <div class="info">
+            <div class="song-title">Eres Mi Religión</div>
+            <div class="singer">Mana</div>
+          </div>
+          <div class="controls">
+            <button class="btn shuffle">🔀</button>
+            <button class="btn prev">⏮️</button>
+            <button class="btn play">▶️</button>
+            <button class="btn pause">⏸️</button>
+            <button class="btn next">⏭️</button>
+            <button class="btn repeat">🔁</button>
+          </div>
+          <div class="progress-bar-container">
+            <input type="range" class="progress-bar" value="0" min="0" max="100" />
+          </div>
+          <audio src="Maná - Eres Mi Religión (Video Oficial).mp3"></audio>
+        </div>
+
+        <!-- Reproductor 5 -->
+        <div class="music-player">
+          <div class="cover-container">
+            <img src="https://i.pinimg.com/236x/eb/8c/e3/eb8ce351c278e973f8f7e824df0cf5a8.jpg" alt="Cover" class="cover" />
+            <span class="heart">♡</span>
+          </div>
+          <div class="info">
+            <div class="song-title">Brillas</div>
+            <div class="singer">Leon Larregui</div>
+          </div>
+          <div class="controls">
+            <button class="btn shuffle">🔀</button>
+            <button class="btn prev">⏮️</button>
+            <button class="btn play">▶️</button>
+            <button class="btn pause">⏸️</button>
+            <button class="btn next">⏭️</button>
+            <button class="btn repeat">🔁</button>
+          </div>
+          <div class="progress-bar-container">
+            <input type="range" class="progress-bar" value="0" min="0" max="100" />
+          </div>
+          <audio src="León Larregui - Brillas (Video Oficial).mp3"></audio>
+        </div>
+
+        <!-- Reproductor 6 -->
+        <div class="music-player">
+          <div class="cover-container">
+            <img src="https://i.pinimg.com/236x/e1/3b/f3/e13bf3e8fb142fc922ef93c659cf5304.jpg" alt="Cover" class="cover" />
+            <span class="heart">♡</span>
+          </div>
+          <div class="info">
+            <div class="song-title">Mi buen Amor</div>
+            <div class="singer">Mon Leferte</div>
+          </div>
+          <div class="controls">
+            <button class="btn shuffle">🔀</button>
+            <button class="btn prev">⏮️</button>
+            <button class="btn play">▶️</button>
+            <button class="btn pause">⏸️</button>
+            <button class="btn next">⏭️</button>
+            <button class="btn repeat">🔁</button>
+          </div>
+          <div class="progress-bar-container">
+            <input type="range" class="progress-bar" value="0" min="0" max="100" />
+          </div>
+          <audio src="Mon Laferte - Mi Buen Amor (Video Oficial) ft. Enrique Bunbury.mp3"></audio>
+        </div>
+
+        <!-- Reproductor 7 -->
+        <div class="music-player">
+          <div class="cover-container">
+            <img src="https://i.pinimg.com/236x/0e/23/30/0e23308188de6e3293e8f40f97dcb1f4.jpg" alt="Cover" class="cover" />
+            <span class="heart">♡</span>
+          </div>
+          <div class="info">
+            <div class="song-title">Contigo</div>
+            <div class="singer">Trio Los Panchos</div>
+          </div>
+          <div class="controls">
+            <button class="btn shuffle">🔀</button>
+            <button class="btn prev">⏮️</button>
+            <button class="btn play">▶️</button>
+            <button class="btn pause">⏸️</button>
+            <button class="btn next">⏭️</button>
+            <button class="btn repeat">🔁</button>
+          </div>
+          <div class="progress-bar-container">
+            <input type="range" class="progress-bar" value="0" min="0" max="100" />
+          </div>
+          <audio src="Contigo (1).mp3"></audio>
+        </div>
+
+        <!-- Reproductor 8 -->
+        <div class="music-player">
+          <div class="cover-container">
+            <img src="https://i.pinimg.com/236x/fd/04/de/fd04de30861570a24b76a425bfca6d57.jpg" alt="Cover" class="cover" />
+            <span class="heart">♡</span>
+          </div>
+          <div class="info">
+            <div class="song-title">Besame Mucho</div>
+            <div class="singer">Zoé</div>
+          </div>
+          <div class="controls">
+            <button class="btn shuffle">🔀</button>
+            <button class="btn prev">⏮️</button>
+            <button class="btn play">▶️</button>
+            <button class="btn pause">⏸️</button>
+            <button class="btn next">⏭️</button>
+            <button class="btn repeat">🔁</button>
+          </div>
+          <div class="progress-bar-container">
+            <input type="range" class="progress-bar" value="0" min="0" max="100" />
+          </div>
+          <audio src="Zoé - Bésame Mucho.mp3"></audio>
+        </div>
+
+        <!-- Reproductor 9 -->
+        <div class="music-player">
+          <div class="cover-container">
+            <img src="https://i.pinimg.com/736x/bd/11/7e/bd117e2ae2ebd15a52d61bf01a113f30.jpg" alt="Cover" class="cover" />
+            <span class="heart">♡</span>
+          </div>
+          <div class="info">
+            <div class="song-title">Locos</div>
+            <div class="singer">Leon Larregui</div>
+          </div>
+          <div class="controls">
+            <button class="btn shuffle">🔀</button>
+            <button class="btn prev">⏮️</button>
+            <button class="btn play">▶️</button>
+            <button class="btn pause">⏸️</button>
+            <button class="btn next">⏭️</button>
+            <button class="btn repeat">🔁</button>
+          </div>
+          <div class="progress-bar-container">
+            <input type="range" class="progress-bar" value="0" min="0" max="100" />
+          </div>
+          <audio src="Locos.mp3"></audio>
+        </div>
+
+        <!-- Reproductor 10 -->
+        <div class="music-player">
+          <div class="cover-container">
+            <img src="https://i.pinimg.com/474x/f7/03/1b/f7031bdeca16443c7962ffbe78253922.jpg" alt="Cover" class="cover" />
+            <span class="heart">♡</span>
+          </div>
+          <div class="info">
+            <div class="song-title">Love</div>
+            <div class="singer">Zoé</div>
+          </div>
+          <div class="controls">
+            <button class="btn shuffle">🔀</button>
+            <button class="btn prev">⏮️</button>
+            <button class="btn play">▶️</button>
+            <button class="btn pause">⏸️</button>
+            <button class="btn next">⏭️</button>
+            <button class="btn repeat">🔁</button>
+          </div>
+          <div class="progress-bar-container">
+            <input type="range" class="progress-bar" value="0" min="0" max="100" />
+          </div>
+          <audio src="Zoé - Love (Video).mp3"></audio>
+        </div>
+
+      </div>
     </div>
   </div>
 
   <!-- Pie de página -->
   <footer>
-    <p>© 2025 RUBI Y ALEXIS. Todos los derechos reservados.</p>
+    <p>© 2025 RUBII Y ALEXIS 2025-2035. Todos los derechos reservados, POR ALEXISSOMARCOMPANY/p>
   </footer>
+
+  <script>
+    // Cronómetro: cuenta regresiva hasta el 7 de abril 2035 a las 12:00 am
+    const timerElement = document.getElementById('timer');
+    // Cambiamos el texto a "Días para nuestra boda"
+    // Para evitar problemas de interpretación de fecha, usamos new Date(año, mes, día, hora, min, seg)
+    // Recuerda que los meses empiezan en 0 (0=Enero, 3=Abril).
+    const countDownDate = new Date(2035, 3, 7, 0, 0, 0).getTime();
+
+    const interval = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Título del cronómetro: "Días para nuestra boda"
+      timerElement.innerHTML =
+        "Días para nuestra boda: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+
+      if (distance < 0) {
+        clearInterval(interval);
+        timerElement.innerHTML = "¡Felicidades, hoy es el gran día!";
+      }
+    }, 1000);
+
+    // Lógica de reproducción para cada reproductor
+    const musicPlayers = document.querySelectorAll('.music-player');
+
+    musicPlayers.forEach((player) => {
+      const audio = player.querySelector('audio');
+      const playBtn = player.querySelector('.play');
+      const pauseBtn = player.querySelector('.pause');
+
+      // Evento Play
+      playBtn.addEventListener('click', () => {
+        audio.play();
+      });
+
+      // Evento Pause
+      pauseBtn.addEventListener('click', () => {
+        audio.pause();
+      });
+    });
+  </script>
 </body>
-</html>
