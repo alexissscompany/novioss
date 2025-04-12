@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teclado Seguro</title>
+  <style>
+    body {
+      background-color: #ffeef5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .container {
+      background-color: #f48fb1;
+      padding: 20px;
+      border-radius: 15px;
+      width: 300px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .input-box {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      justify-content: center;
+    }
+
+    input[type="password"] {
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      width: 70%;
+      text-align: center;
+      font-size: 18px;
+      background-color: #fff;
+    }
+
+    .keypad {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .keypad button {
+      background-color: #fff;
+      border: none;
+      padding: 15px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .keypad button:hover {
+      background-color: #ffcdd2;
+    }
+
+    .heart-image {
+      width: 70px;
+      height: 70px;
+      background-image: url('https://i.imgur.com/hPv5nVN.png'); /* cambia por tu imagen */
+      background-size: cover;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="heart-image"></div>
+
+    <div class="input-box">
+      <input type="password" id="password" readonly placeholder="••••••">
+    </div>
+
+    <div class="keypad">
+      <button onclick="addDigit('1')">1</button>
+      <button onclick="addDigit('2')">2</button>
+      <button onclick="addDigit('3')">3</button>
+      <button onclick="addDigit('4')">4</button>
+      <button onclick="addDigit('5')">5</button>
+      <button onclick="addDigit('6')">6</button>
+      <button onclick="addDigit('7')">7</button>
+      <button onclick="addDigit('8')">8</button>
+      <button onclick="addDigit('9')">9</button>
+      <button onclick="clearPassword()">#</button>
+      <button onclick="addDigit('0')">0</button>
+      <button onclick="submitPassword()">🔒</button>
+    </div>
+  </div>
+
+  <script>
+    function addDigit(digit) {
+      const input = document.getElementById("password");
+      if (input.value.length < 6) {
+        input.value += digit;
+      }
+    }
+
+    function clearPassword() {
+      document.getElementById("password").value = '';
+    }
+
+    function submitPassword() {
+      const password = document.getElementById("password").value;
+      if (password === "071124") {
+        window.location.href = "index.html";
+      } else {
+        alert("Contraseña incorrecta ❌");
+        clearPassword();
+      }
+    }
+  </script>
+</body>
+</html>
